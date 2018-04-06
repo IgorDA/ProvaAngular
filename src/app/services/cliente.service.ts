@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { Aluno } from '../domain/aluno';
+import { Cliente } from '../domain/cliente';
 
 @Injectable()
-export class AlunoService {
+export class ClienteService {
 
   constructor(private http : HttpClient) { }
 
-  getAluno() :Observable<Aluno[]>{
-
-    return this.http.get<Aluno[]>(`http://dados.iffarroupilha.edu.br/api/v1/alunos.json`);
+  getCliente() : Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(`https://tcc-lojavirtual.herokuapp.com/clientes`);
   }
-
-
 
 }

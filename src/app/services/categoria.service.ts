@@ -8,11 +8,9 @@ export class CategoriaService {
 
   constructor(private http : HttpClient) { }
 
-  getCategoria() :Observable<Categoria[]>{
+  getCategorias() : Observable<Categoria[]>{
 
     return this.http.get<Categoria[]>(`https://tcc-lojavirtual.herokuapp.com/categorias`);
   }
-
-
 
 }
